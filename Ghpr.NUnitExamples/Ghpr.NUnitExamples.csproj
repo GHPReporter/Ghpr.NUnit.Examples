@@ -44,10 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="TestClass1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestClass2.cs" />
+    <Compile Include="TestClass3.cs" />
+    <Compile Include="TestClass4.cs" />
+    <Compile Include="TestClass5.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
