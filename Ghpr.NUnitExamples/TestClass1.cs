@@ -7,13 +7,13 @@ namespace Ghpr.NUnitExamples
     [TestFixture]
     public class TestClass1
     {
-        [Test]
+        [Test, Property("TestGuid", "11111111-1111-1111-1111-111111111111")]
         public void UnsuccessTestThreeEvents()
         {
             Assert.AreEqual(1, 2);
         }
         
-        [Test]
+        [Test, Property("TestGuid", "11111111-1111-1111-1111-111111111112")]
         public void SuccessTestThreeEvents()
         {
             var r = new Random();
