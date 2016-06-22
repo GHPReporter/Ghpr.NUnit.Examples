@@ -3,7 +3,6 @@ using NUnit.Framework;
 
 namespace Ghpr.NUnitExamples
 {
-
     [TestFixture]
     public class TestClass2
     {

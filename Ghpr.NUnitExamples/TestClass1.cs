@@ -8,13 +8,14 @@ namespace Ghpr.NUnitExamples
     public class TestClass1
     {
         [Test, Property("TestGuid", "11111111-1111-1111-1111-111111111111")]
-        public void UnsuccessTestThreeEvents()
+        public void SimpleFailedTest()
         {
+            Console.WriteLine("This is test output, we are logging some stuff!");
             Assert.AreEqual(1, 2);
         }
         
         [Test, Property("TestGuid", "11111111-1111-1111-1111-111111111112")]
-        public void SuccessTestThreeEvents()
+        public void RandomDurationPassedTest()
         {
             var r = new Random();
             Thread.Sleep(r.Next(700));
