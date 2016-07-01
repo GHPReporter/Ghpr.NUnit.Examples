@@ -7,24 +7,93 @@ namespace Ghpr.NUnitExamples.Cat3
     [TestFixture]
     public class TestClass14
     {
-        [TestCase("0", 1, "11111111-1111-1111-1111-111111111141", TestName = "Test 1")]
-        [TestCase("1", 1, "11111111-1111-1111-1111-111111111142", TestName = "Test 2")]
-        [TestCase("2", 2, "11111111-1111-1111-1111-111111111143", TestName = "Test 3")]
-        [TestCase("3", 3, "11111111-1111-1111-1111-111111111144", TestName = "Test with really really really really really really really " +
-                                                                             "really really really really really really really really really " +
-                                                                             "really really really really really really really really really " +
-                                                                             "really really really really really really really really really " +
-                                                                             "really really really really really really really really long name")]
-        [TestCase("4", 4, "11111111-1111-1111-1111-111111111145", TestName = "Test 5")]
-        [TestCase("5", 5, "11111111-1111-1111-1111-111111111146", TestName = "Test 6")]
-        [TestCase("6", 6, "11111111-1111-1111-1111-111111111147", TestName = "Test 7")]
-        [TestCase("7", 7, "11111111-1111-1111-1111-111111111148", TestName = "Test 8")]
-        [Category("Cat2")]
-        public void ParamTestName(string input, int expected, string guid)
+        private static void RandomResultMethod()
         {
-            Console.WriteLine($"Guid: {guid}");
-            Thread.Sleep(100);
-            Assert.AreEqual(input, expected.ToString("D"));
+            var r = new Random();
+            var randValue = r.Next(1000);
+            if (randValue > 0)//passed
+            {
+                Assert.AreEqual(1, 1);
+            }
+            else if (randValue > 199)//failed
+            {
+                Assert.AreEqual(1, 2);
+            }
+            else if (randValue > 399)//broken
+            {
+                throw new Exception("Broken:(");
+            }
+            else if (randValue > 599)//ignored
+            {
+                Assert.Ignore("Ignored test");
+            }
+            else if (randValue > 799)//inconclusive
+            {
+                Assert.Inconclusive("Iconc. test");
+            }
+        }
+
+        [Test]
+        [Category("Cat3")]
+        public void RandomResultTest1()
+        {
+            RandomResultMethod();
+        }
+
+        [Test]
+        [Category("Cat3")]
+        public void RandomResultTest2()
+        {
+            RandomResultMethod();
+        }
+
+        [Test]
+        [Category("Cat3")]
+        public void RandomResultTest3()
+        {
+            RandomResultMethod();
+        }
+
+        [Test]
+        [Category("Cat3")]
+        public void RandomResultTest4()
+        {
+            RandomResultMethod();
+        }
+
+        [Test]
+        [Category("Cat3")]
+        public void RandomResultTest5()
+        {
+            RandomResultMethod();
+        }
+
+        [Test]
+        [Category("Cat3")]
+        public void RandomResultTest6()
+        {
+            RandomResultMethod();
+        }
+
+        [Test]
+        [Category("Cat3")]
+        public void RandomResultTest7()
+        {
+            RandomResultMethod();
+        }
+
+        [Test]
+        [Category("Cat3")]
+        public void RandomResultTest8()
+        {
+            RandomResultMethod();
+        }
+
+        [Test]
+        [Category("Cat3")]
+        public void RandomResultTest9()
+        {
+            RandomResultMethod();
         }
     }
 }

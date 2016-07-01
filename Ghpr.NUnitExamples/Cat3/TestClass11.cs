@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading;
 using NUnit.Framework;
 
 namespace Ghpr.NUnitExamples.Cat3
@@ -19,7 +18,7 @@ namespace Ghpr.NUnitExamples.Cat3
             {
                 Assert.AreEqual(1, 2);
             }
-            else if (randValue > 399)//failed
+            else if (randValue > 399)//broken
             {
                 throw new Exception("Broken:(");
             }
@@ -27,70 +26,70 @@ namespace Ghpr.NUnitExamples.Cat3
             {
                 Assert.Ignore("Ignored test");
             }
-            else if (randValue > 799)//failed
+            else if (randValue > 799)//inconclusive
             {
                 Assert.Inconclusive("Iconc. test");
             }
         }
 
         [Test]
-        [Category("Cat2")]
+        [Category("Cat3")]
         public void RandomResultTest1()
         {
             RandomResultMethod();
         }
 
         [Test]
-        [Category("Cat2")]
+        [Category("Cat3")]
         public void RandomResultTest2()
         {
             RandomResultMethod();
         }
 
         [Test]
-        [Category("Cat2")]
+        [Category("Cat3")]
         public void RandomResultTest3()
         {
             RandomResultMethod();
         }
 
         [Test]
-        [Category("Cat2")]
+        [Category("Cat3")]
         public void RandomResultTest4()
         {
             RandomResultMethod();
         }
 
         [Test]
-        [Category("Cat2")]
+        [Category("Cat3")]
         public void RandomResultTest5()
         {
             RandomResultMethod();
         }
 
         [Test]
-        [Category("Cat2")]
+        [Category("Cat3")]
         public void RandomResultTest6()
         {
             RandomResultMethod();
         }
 
         [Test]
-        [Category("Cat2")]
+        [Category("Cat3")]
         public void RandomResultTest7()
         {
             RandomResultMethod();
         }
 
         [Test]
-        [Category("Cat2")]
+        [Category("Cat3")]
         public void RandomResultTest8()
         {
             RandomResultMethod();
         }
 
         [Test]
-        [Category("Cat2")]
+        [Category("Cat3")]
         public void RandomResultTest9()
         {
             RandomResultMethod();

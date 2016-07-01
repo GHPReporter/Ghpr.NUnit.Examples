@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System;
+using System.Threading;
 using NUnit.Framework;
 
 namespace Ghpr.NUnitExamples.Cat3
@@ -6,35 +7,94 @@ namespace Ghpr.NUnitExamples.Cat3
     [TestFixture]
     public class TestClass12
     {
+
+        private static void RandomResultMethod()
+        {
+            var r = new Random();
+            var randValue = r.Next(1000);
+            if (randValue > 0)//passed
+            {
+                Assert.AreEqual(1, 1);
+            }
+            else if (randValue > 199)//failed
+            {
+                Assert.AreEqual(1, 2);
+            }
+            else if (randValue > 399)//broken
+            {
+                throw new Exception("Broken:(");
+            }
+            else if (randValue > 599)//ignored
+            {
+                Assert.Ignore("Ignored test");
+            }
+            else if (randValue > 799)//inconclusive
+            {
+                Assert.Inconclusive("Iconc. test");
+            }
+        }
+
         [Test]
-        [Category("Cat2")]
-        public void TestMethod1()
+        [Category("Cat3")]
+        public void RandomResultTest1()
         {
-            Thread.Sleep(500);
-            Assert.AreEqual(1, 2);
+            RandomResultMethod();
         }
 
-        [Test, Category("SuccessCategory")]
-        [Category("Cat2")]
-        public void TestPassed()
+        [Test]
+        [Category("Cat3")]
+        public void RandomResultTest2()
         {
-            Thread.Sleep(200);
-            Assert.AreEqual(1, 1);
+            RandomResultMethod();
         }
 
-        [Test, Category("SuccessCategory")]
-        [Category("Cat2")]
-        public void TestPassed2()
+        [Test]
+        [Category("Cat3")]
+        public void RandomResultTest3()
         {
-            Thread.Sleep(100);
-            Assert.AreEqual(1, 1);
+            RandomResultMethod();
         }
 
-        [Test, Category("SuccessCategory")]
-        [Category("Cat2")]
-        public void TestPassed3()
+        [Test]
+        [Category("Cat3")]
+        public void RandomResultTest4()
         {
-            Assert.AreEqual(1, 1);
+            RandomResultMethod();
+        }
+
+        [Test]
+        [Category("Cat3")]
+        public void RandomResultTest5()
+        {
+            RandomResultMethod();
+        }
+
+        [Test]
+        [Category("Cat3")]
+        public void RandomResultTest6()
+        {
+            RandomResultMethod();
+        }
+
+        [Test]
+        [Category("Cat3")]
+        public void RandomResultTest7()
+        {
+            RandomResultMethod();
+        }
+
+        [Test]
+        [Category("Cat3")]
+        public void RandomResultTest8()
+        {
+            RandomResultMethod();
+        }
+
+        [Test]
+        [Category("Cat3")]
+        public void RandomResultTest9()
+        {
+            RandomResultMethod();
         }
     }
 }
