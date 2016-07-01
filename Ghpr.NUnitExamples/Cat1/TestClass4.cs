@@ -2,7 +2,7 @@
 using System.Threading;
 using NUnit.Framework;
 
-namespace Ghpr.NUnitExamples
+namespace Ghpr.NUnitExamples.Cat1
 {
     [TestFixture]
     public class ParamTestClass
@@ -19,6 +19,7 @@ namespace Ghpr.NUnitExamples
         [TestCase("5", 5, "11111111-1111-1111-1111-111111111146", TestName = "Test 6")]
         [TestCase("6", 6, "11111111-1111-1111-1111-111111111147", TestName = "Test 7")]
         [TestCase("7", 7, "11111111-1111-1111-1111-111111111148", TestName = "Test 8")]
+        [Category("Cat1")]
         public void ParamTestName(string input, int expected, string guid)
         {
             Console.WriteLine($"Guid: {guid}");

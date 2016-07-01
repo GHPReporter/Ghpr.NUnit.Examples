@@ -24,7 +24,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>build\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -76,18 +76,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestClass1.cs" />
+    <Compile Include="Cat3\TestClass11.cs" />
+    <Compile Include="Cat3\TestClass12.cs" />
+    <Compile Include="Cat3\TestClass13.cs" />
+    <Compile Include="Cat3\TestClass14.cs" />
+    <Compile Include="Cat3\TestClass15.cs" />
+    <Compile Include="Cat2\TestClass06.cs" />
+    <Compile Include="Cat2\TestClass07.cs" />
+    <Compile Include="Cat2\TestClass08.cs" />
+    <Compile Include="Cat2\TestClass09.cs" />
+    <Compile Include="Cat2\TestClass10.cs" />
+    <Compile Include="Cat1\TestClass1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestClass2.cs" />
-    <Compile Include="TestClass3.cs" />
-    <Compile Include="TestClass4.cs" />
-    <Compile Include="TestClass5.cs" />
+    <Compile Include="Cat1\TestClass2.cs" />
+    <Compile Include="Cat1\TestClass3.cs" />
+    <Compile Include="Cat1\TestClass4.cs" />
+    <Compile Include="Cat1\TestClass5.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="SomeTests.nunit">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ghpr.NUnitTests\Ghpr.NUnitTests.csproj">
+      <Project>{fda94a39-20db-4dc3-9ff2-810db4486a1f}</Project>
+      <Name>Ghpr.NUnitTests</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -2,19 +2,21 @@
 using System.Threading;
 using NUnit.Framework;
 
-namespace Ghpr.NUnitExamples
+namespace Ghpr.NUnitExamples.Cat2
 {
     [TestFixture]
-    public class TestClass1
+    public class TestClass06
     {
-        [Test, Property("TestGuid", "11111111-1111-1111-1111-111111111111")]
+        [Test]
+        [Category("Cat2")]
         public void SimpleFailedTest()
         {
             Console.WriteLine("This is test output, we are logging some stuff!");
             Assert.AreEqual(1, 2);
         }
         
-        [Test, Property("TestGuid", "11111111-1111-1111-1111-111111111112")]
+        [Test]
+        [Category("Cat2")]
         public void RandomDurationPassedTest()
         {
             var r = new Random();
@@ -23,6 +25,7 @@ namespace Ghpr.NUnitExamples
         }
 
         [Test]
+        [Category("Cat2")]
         public void LongLogTest()
         {
             Console.WriteLine("Testing log writing 1");
@@ -42,6 +45,7 @@ namespace Ghpr.NUnitExamples
         }
 
         [Test]
+        [Category("Cat2")]
         public void SuccessTest()
         {
             Thread.Sleep(200);
@@ -49,6 +53,7 @@ namespace Ghpr.NUnitExamples
         }
 
         [Test]
+        [Category("Cat2")]
         public void ErrorExpected()
         {
             Thread.Sleep(300);
@@ -56,6 +61,7 @@ namespace Ghpr.NUnitExamples
         }
 
         [Test]
+        [Category("Cat2")]
         public void TestMethodInconclusive()
         {
             Thread.Sleep(300);
@@ -63,6 +69,7 @@ namespace Ghpr.NUnitExamples
         }
 
         [Test]
+        [Category("Cat2")]
         public void TestMethodIgnored()
         {
             Thread.Sleep(300);
@@ -70,6 +77,7 @@ namespace Ghpr.NUnitExamples
         }
 
         [Test]
+        [Category("Cat2")]
         public void TestMethodIgnored2()
         {
             Thread.Sleep(300);

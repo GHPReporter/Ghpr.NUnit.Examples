@@ -1,12 +1,13 @@
 ﻿using System.Threading;
 using NUnit.Framework;
 
-namespace Ghpr.NUnitExamples
+namespace Ghpr.NUnitExamples.Cat1
 {
     [TestFixture]
     public class TestClass5
     {
         [Test]
+        [Category("Cat1")]
         public void TestMethod1()
         {
             Thread.Sleep(200);
@@ -14,6 +15,7 @@ namespace Ghpr.NUnitExamples
         }
 
         [Test, Category("SuccessCategory")]
+        [Category("Cat1")]
         public void TestMethod2()
         {
             Thread.Sleep(100);
@@ -24,6 +26,7 @@ namespace Ghpr.NUnitExamples
         [TestCase("1", 1)]
         [TestCase("2", 2, TestName = "Testing name attribute")]
         [Category("SuccessCategory")]
+        [Category("Cat1")]
         public void ParamTestName(string input, int expected)
         {
             Thread.Sleep(100);

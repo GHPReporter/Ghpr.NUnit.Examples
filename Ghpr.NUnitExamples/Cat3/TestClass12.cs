@@ -1,12 +1,13 @@
 ﻿using System.Threading;
 using NUnit.Framework;
 
-namespace Ghpr.NUnitExamples
+namespace Ghpr.NUnitExamples.Cat3
 {
     [TestFixture]
-    public class TestClass2
+    public class TestClass12
     {
         [Test]
+        [Category("Cat2")]
         public void TestMethod1()
         {
             Thread.Sleep(500);
@@ -14,6 +15,7 @@ namespace Ghpr.NUnitExamples
         }
 
         [Test, Category("SuccessCategory")]
+        [Category("Cat2")]
         public void TestPassed()
         {
             Thread.Sleep(200);
@@ -21,6 +23,7 @@ namespace Ghpr.NUnitExamples
         }
 
         [Test, Category("SuccessCategory")]
+        [Category("Cat2")]
         public void TestPassed2()
         {
             Thread.Sleep(100);
@@ -28,7 +31,8 @@ namespace Ghpr.NUnitExamples
         }
 
         [Test, Category("SuccessCategory")]
-        public void NoGuidTest()
+        [Category("Cat2")]
+        public void TestPassed3()
         {
             Assert.AreEqual(1, 1);
         }
