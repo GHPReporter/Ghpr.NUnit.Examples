@@ -7,8 +7,11 @@ namespace Ghpr.NUnitExamples.Cat1
     [TestFixture]
     public class TestClass1
     {
-        [Test, Property("TestGuid", "11111111-1111-1111-1111-111111111111")]
+        [Test, Property("TestGuid", "11111111-1111-1111-1111-111111111111"), 
+            Property("Priority", "High"), 
+            Property("TestType", "Smoke")]
         [Category("Cat1")]
+        [Category("Failed")]
         public void SimpleFailedTest()
         {
             Console.WriteLine("This is test output, we are logging some stuff!");
