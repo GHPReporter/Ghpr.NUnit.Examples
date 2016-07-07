@@ -92,6 +92,7 @@
     <Compile Include="Cat1\TestClass3.cs" />
     <Compile Include="Cat1\TestClass4.cs" />
     <Compile Include="Cat1\TestClass5.cs" />
+    <Compile Include="ResultHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="SomeTests.nunit">

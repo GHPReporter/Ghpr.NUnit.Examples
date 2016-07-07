@@ -1,37 +1,12 @@
 ﻿using System;
 using NUnit.Framework;
+using static Ghpr.NUnitExamples.ResultHelper;
 
 namespace Ghpr.NUnitExamples.Cat3
 {
     [TestFixture, Ignore("Ignored test fixture")]
     public class TestClass13
     {
-        private static void RandomResultMethod()
-        {
-            var r = new Random();
-            var randValue = r.Next(1000);
-            if (randValue > 0)//passed
-            {
-                Assert.AreEqual(1, 1);
-            }
-            else if (randValue > 199)//failed
-            {
-                Assert.AreEqual(1, 2);
-            }
-            else if (randValue > 399)//broken
-            {
-                throw new Exception("Broken:(");
-            }
-            else if (randValue > 599)//ignored
-            {
-                Assert.Ignore("Ignored test");
-            }
-            else if (randValue > 799)//inconclusive
-            {
-                Assert.Inconclusive("Iconc. test");
-            }
-        }
-
         [Test]
         [Category("Cat3")]
         public void RandomResultTest1()
