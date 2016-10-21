@@ -30,14 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Ghpr.Core, Version=0.2.4.8, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\Ghpr.NUnitExamples\packages\Ghpr.Core.0.2.4.8\lib\net452\Ghpr.Core.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Ghpr.NUnit, Version=0.2.4.8, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\Ghpr.NUnitExamples\packages\Ghpr.NUnit.0.2.4.8\lib\net452\Ghpr.NUnit.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Mono.Cecil, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
       <HintPath>..\Ghpr.NUnitExamples\packages\NUnit.Engine.3.5.0\lib\Mono.Cecil.dll</HintPath>
       <Private>True</Private>
@@ -84,9 +76,6 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include=".nuget\nuget.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
