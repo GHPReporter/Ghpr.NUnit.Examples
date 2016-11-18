@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Threading;
+using NUnit.Engine.Drivers;
 using NUnit.Framework;
+using NUnit.Framework.Internal;
 
 namespace Ghpr.NUnitTests
 {
@@ -28,11 +30,31 @@ namespace Ghpr.NUnitTests
 
         [Test]
         [Category("Cat1")]
+        [Property("aaa", 42)]
         public void TestMethod3()
         {
             Console.WriteLine("Testing log writing 1");
             Console.WriteLine("Testing log writing 2");
-            throw new Exception("Some error occured!");
+            
+            var pb=  new PropertyBag();
+            pb.Add("a", "1");
+            pb.Add("b", "2");
+            pb.Add("b", "3");
+            foreach (var key in pb.Keys)
+            {
+                TestContext.CurrentContext.Test.Properties.Add(key, pb.Get(key));
+            }
+
+            Console.Write($"{TestContext.CurrentContext.Test.FullName}");
+
+            var p = TestContext.CurrentContext.Test.Properties;
+
+            foreach (var k in p.Keys)
+            {
+                Console.WriteLine($"k: {k}, v: {p.Get(k)}");
+            }
+
+            //throw new Exception("Some error occured!");
         }
     }
 }
