@@ -87,6 +87,24 @@
     <Compile Include="ResultHelper.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="GhprNUnit\Ghpr.Core.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GhprNUnit\Ghpr.NUnit.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GhprNUnit\Newtonsoft.Json.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GhprNUnit\nunit.engine.api.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GhprNUnit\nunit.engine.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GhprNUnit\nunit.framework.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="SomeTests.nunit">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
