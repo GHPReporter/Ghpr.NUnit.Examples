@@ -230,9 +230,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 README.md
-README.md
 .vs/config/applicationhost.config
 .idea/modules.xml
 .idea/vcs.xml
-.idea/workspace.xml
 .idea/workspace.xml
