@@ -1,5 +1,11 @@
 ﻿using System;
+using System.Drawing;
+using System.IO;
+using System.Runtime.InteropServices;
 using System.Threading;
+using System.Windows.Forms;
+using Ghpr.NUnit.Extensions;
+using Ghpr.NUnit.Utils;
 using NUnit.Engine.Drivers;
 using NUnit.Framework;
 using NUnit.Framework.Internal;
@@ -28,15 +34,40 @@ namespace Ghpr.NUnitTests
             Assert.AreEqual(input, expected.ToString("D"));
         }
 
+        private void GetScreen()
+        {
+            var b = Screen.PrimaryScreen.Bounds;
+            using (var btm = new Bitmap(b.Width, b.Height))
+            {
+                using (var g = Graphics.FromImage(btm))
+                {
+                    g.CopyFromScreen(b.X, b.Y, 0, 0, btm.Size, CopyPixelOperation.SourceCopy);
+
+                    var bytes = ImageToByte(btm);
+
+                    TestRunHelper.SaveScreenshot(bytes);
+                }
+            }
+        }
+
+        public static byte[] ImageToByte(Image img)
+        {
+            var converter = new ImageConverter();
+            return (byte[])converter.ConvertTo(img, typeof(byte[]));
+        }
+
         [Test]
         [Category("Cat1")]
+        [Category("test")]
         [Property("aaa", 42)]
         public void TestMethod3()
         {
             Console.WriteLine("Testing log writing 1");
             Console.WriteLine("Testing log writing 2");
-            
-            var pb=  new PropertyBag();
+
+            Console.Write($"{GhprEventListener.Settings.OutputPath}");
+
+            var pb =  new PropertyBag();
             pb.Add("a", "1");
             pb.Add("b", "2");
             pb.Add("b", "3");
@@ -44,15 +75,16 @@ namespace Ghpr.NUnitTests
             {
                 TestContext.CurrentContext.Test.Properties.Add(key, pb.Get(key));
             }
-
             Console.Write($"{TestContext.CurrentContext.Test.FullName}");
-
             var p = TestContext.CurrentContext.Test.Properties;
-
             foreach (var k in p.Keys)
             {
                 Console.WriteLine($"k: {k}, v: {p.Get(k)}");
             }
+
+            Console.WriteLine("GETTING SCREEN...");
+            GetScreen();
+            Console.WriteLine("GETTING SCREEN DONE!");
 
             //throw new Exception("Some error occured!");
         }
