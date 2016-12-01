@@ -26,7 +26,6 @@ namespace Ghpr.NUnitTests
 
         [Test]
         [Category("Screenshots")]
-        [Property("aaa", 42)]
         public void TestMethodPassed()
         {
             Console.Write("This is example of taking screenshots inside test");
