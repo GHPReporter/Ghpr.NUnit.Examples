@@ -11,7 +11,7 @@ namespace Ghpr.NUnitTests
     {
         public const string GhprNUnitOutputFolder = @"C:\_GHPReportOutput";
 
-        public static void TakeScreen()
+        public static byte[] TakeScreen()
         {
             var b = Screen.PrimaryScreen.Bounds;
             var ic = new ImageConverter();
@@ -19,18 +19,18 @@ namespace Ghpr.NUnitTests
             using (var g = Graphics.FromImage(btm))
             {
                 g.CopyFromScreen(b.X, b.Y, 0, 0, btm.Size, CopyPixelOperation.SourceCopy);
-                var bytes = (byte[])ic.ConvertTo(btm, typeof(byte[]));
-                ScreenHelper.SaveScreenshot(bytes, GhprNUnitOutputFolder);
+                return (byte[])ic.ConvertTo(btm, typeof(byte[]));
             }
         }
 
-        [Test]
+        [Test(Description = "This is example of taking screenshots inside test")]
         [Category("Screenshots")]
         public void TestMethodPassed()
         {
-            Console.Write("This is example of taking screenshots inside test");
             Console.WriteLine("Taking screen...");
-            TakeScreen();
+            var bytes = TakeScreen();
+            //all you need to do is to pass byte[] to ScreenHelper:
+            ScreenHelper.SaveScreenshot(bytes, GhprNUnitOutputFolder);
             Console.WriteLine("Done.");
         }
     }
