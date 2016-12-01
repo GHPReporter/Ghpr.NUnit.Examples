@@ -45,7 +45,7 @@ namespace Ghpr.NUnitTests
 
                     var bytes = ImageToByte(btm);
 
-                    TestRunHelper.SaveScreenshot(bytes);
+                    ScreenHelper.SaveScreenshot(bytes, @"C:\_GHPReportOutput");
                 }
             }
         }
@@ -65,7 +65,7 @@ namespace Ghpr.NUnitTests
             Console.WriteLine("Testing log writing 1");
             Console.WriteLine("Testing log writing 2");
 
-            Console.Write($"{GhprEventListener.Settings.OutputPath}");
+            //Console.Write($"{GhprEventListener.Settings.OutputPath}");
 
             var pb =  new PropertyBag();
             pb.Add("a", "1");
