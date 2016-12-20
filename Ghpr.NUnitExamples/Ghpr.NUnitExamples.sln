@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ghpr.NUnitExamples", "Ghpr.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ghpr.NUnitTests", "..\Ghpr.NUnitTests\Ghpr.NUnitTests.csproj", "{FDA94A39-20DB-4DC3-9FF2-810DB4486A1F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallelTests", "..\ParallelTests\ParallelTests.csproj", "{300A7C38-39B9-4455-A142-A0CA26352FAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FDA94A39-20DB-4DC3-9FF2-810DB4486A1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDA94A39-20DB-4DC3-9FF2-810DB4486A1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDA94A39-20DB-4DC3-9FF2-810DB4486A1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{300A7C38-39B9-4455-A142-A0CA26352FAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{300A7C38-39B9-4455-A142-A0CA26352FAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{300A7C38-39B9-4455-A142-A0CA26352FAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{300A7C38-39B9-4455-A142-A0CA26352FAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
