@@ -1,7 +1,6 @@
 ﻿<NUnitProject>
   <Settings activeconfig="Default"/>
   <Config name="Default" binpathtype="Auto">
-    <assembly path="Ghpr.NUnitExamples.dll" />
-    <assembly path="Ghpr.NUnitTests.dll" />
+    <assembly path="ParallelTests.dll" />
   </Config>
 </NUnitProject>
