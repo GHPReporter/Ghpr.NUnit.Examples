@@ -15,4 +15,4 @@
 
 # Ghpr.NUnit.Examples
 
-Examples for NUnit adapter. You can create pull request with new tests to reproduce some GHPR.Core or GHPR.NUnit issues.
+Examples for NUnit adapter. You can create pull request with new tests to reproduce some **Ghpr.Core** or **Ghpr.NUnit** issues.
