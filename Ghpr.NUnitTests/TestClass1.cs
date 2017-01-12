@@ -45,7 +45,7 @@ namespace Ghpr.NUnitTests
 
                     var bytes = ImageToByte(btm);
 
-                    ScreenHelper.SaveScreenshot(bytes, @"C:\_GHPReportOutput");
+                    ScreenHelper.SaveScreenshot(bytes);
                 }
             }
         }

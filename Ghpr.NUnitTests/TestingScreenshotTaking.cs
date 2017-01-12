@@ -9,8 +9,6 @@ namespace Ghpr.NUnitTests
     [TestFixture]
     public class TestingScreenshotTaking
     {
-        public const string GhprNUnitOutputFolder = @"C:\_GHPReportOutput";
-
         public static byte[] TakeScreen()
         {
             var b = Screen.PrimaryScreen.Bounds;
@@ -30,7 +28,7 @@ namespace Ghpr.NUnitTests
             Console.WriteLine("Taking screen...");
             var bytes = TakeScreen();
             //all you need to do is to pass byte[] to ScreenHelper:
-            ScreenHelper.SaveScreenshot(bytes, GhprNUnitOutputFolder);
+            ScreenHelper.SaveScreenshot(bytes);
             Console.WriteLine("Done.");
         }
     }
