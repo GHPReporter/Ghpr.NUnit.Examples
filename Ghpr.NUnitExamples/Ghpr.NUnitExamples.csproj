@@ -109,7 +109,9 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Ghpr.Core.Settings.json" />
-    <None Include="Ghpr.NUnit.Settings.json" />
+    <None Include="Ghpr.NUnit.Settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="ParallelTests.nunit">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
