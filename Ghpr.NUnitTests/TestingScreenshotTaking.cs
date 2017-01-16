@@ -3,12 +3,22 @@ using System.Drawing;
 using System.Windows.Forms;
 using Ghpr.NUnit.Utils;
 using NUnit.Framework;
+using NUnit.Framework.Interfaces;
 
 namespace Ghpr.NUnitTests
 {
     [TestFixture]
     public class TestingScreenshotTaking
     {
+        [TearDown]
+        public void TakeScreenIfFailed()
+        {
+            if (TestContext.CurrentContext.Result.Outcome.Equals(ResultState.Failure))
+            {
+                ScreenHelper.SaveScreenshot(TakeScreen());
+            }
+        }
+
         public static byte[] TakeScreen()
         {
             var b = Screen.PrimaryScreen.Bounds;
@@ -30,6 +40,18 @@ namespace Ghpr.NUnitTests
             //all you need to do is to pass byte[] to ScreenHelper:
             ScreenHelper.SaveScreenshot(bytes);
             Console.WriteLine("Done.");
+        }
+
+        [Test(Description = "This is example of taking screenshots inside test")]
+        [Category("Screenshots")]
+        public void TestMethodFailed()
+        {
+            Console.WriteLine("Taking screen...");
+            var bytes = TakeScreen();
+            //all you need to do is to pass byte[] to ScreenHelper:
+            ScreenHelper.SaveScreenshot(bytes);
+            Console.WriteLine("Done.");
+            Assert.Fail("Noooooo..... Test is failed.");
         }
     }
 }
