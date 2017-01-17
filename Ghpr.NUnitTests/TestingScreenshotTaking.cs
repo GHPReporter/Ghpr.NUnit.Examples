@@ -13,7 +13,8 @@ namespace Ghpr.NUnitTests
         [TearDown]
         public void TakeScreenIfFailed()
         {
-            if (TestContext.CurrentContext.Result.Outcome.Equals(ResultState.Failure))
+            var res = TestContext.CurrentContext.Result.Outcome;
+            if (res.Equals(ResultState.Failure) || res.Equals(ResultState.Error))
             {
                 ScreenHelper.SaveScreenshot(TakeScreen());
             }
