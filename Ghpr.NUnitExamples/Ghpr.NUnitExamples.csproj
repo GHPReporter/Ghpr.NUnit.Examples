@@ -76,6 +76,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cat1\ParameterizedTestFixture.cs" />
+    <Compile Include="Cat1\TestFixtureSourceTests2.cs" />
+    <Compile Include="Cat1\TestFixtureSourceTests.cs" />
     <Compile Include="Cat3\TestClass11.cs" />
     <Compile Include="Cat3\TestClass12.cs" />
     <Compile Include="Cat3\TestClass13.cs" />
@@ -109,7 +112,9 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Ghpr.Core.Settings.json" />
-    <None Include="Ghpr.NUnit.Settings.json" />
+    <None Include="Ghpr.NUnit.Settings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="ParallelTests.nunit">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
