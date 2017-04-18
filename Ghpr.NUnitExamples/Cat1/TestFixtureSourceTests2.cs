@@ -23,7 +23,7 @@ namespace Ghpr.NUnitExamples.Cat1
         {
             new TestDataObject { Field1 = 1, Field2 = "1", Field3 = new[]{0.1, 0.2}},
             new TestDataObject { Field1 = 2, Field2 = "2", Field3 = new[]{0.2, 0.4}},
-            new TestDataObject { Field1 = 3, Field2 = "3", Field3 = new[]{0.3, 0.6}},
+            new TestDataObject { Field1 = 3, Field2 = "3", Field3 = new[]{0.3, 0.6}}
         };
     }
 

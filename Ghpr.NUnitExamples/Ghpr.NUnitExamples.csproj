@@ -77,6 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cat1\ParameterizedTestFixture.cs" />
+    <Compile Include="Cat1\TestFixtureSourceTests3.cs" />
     <Compile Include="Cat1\TestFixtureSourceTests2.cs" />
     <Compile Include="Cat1\TestFixtureSourceTests.cs" />
     <Compile Include="Cat3\TestClass11.cs" />
