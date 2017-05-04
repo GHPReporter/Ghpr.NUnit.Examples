@@ -38,5 +38,11 @@ namespace Ghpr.NUnitExamples.Cat1
             Thread.Sleep(100);
             Assert.AreEqual(input, expected.ToString("D"));
         }
+
+        [TestCase("7", 8, TestName = "Test 9 (another test)")]
+        public void SomeTestName2(string input, int expected)
+        {
+            Assert.AreEqual(input, expected.ToString("D"));
+        }
     }
 }
