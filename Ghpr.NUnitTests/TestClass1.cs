@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Drawing;
-using System.IO;
-using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
-using Ghpr.NUnit.Extensions;
 using Ghpr.NUnit.Utils;
-using NUnit.Engine.Drivers;
 using NUnit.Framework;
 using NUnit.Framework.Internal;
 
