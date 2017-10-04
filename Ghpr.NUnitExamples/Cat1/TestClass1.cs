@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using Ghpr.NUnit.Utils;
 using NUnit.Framework;
 
 namespace Ghpr.NUnitExamples.Cat1
@@ -7,14 +8,42 @@ namespace Ghpr.NUnitExamples.Cat1
     [TestFixture]
     public class TestClass1
     {
+        private const string Actual = @"
+<?xml version=""1.0""?>
+<PARTS>
+   <TITLE>Computer Parts</TITLE>
+   <PART>
+      <ITEM>Motherboard</ITEM>
+      <MANUFACTURER>ASUS</MANUFACTURER>
+      <MODEL>P3B-F</MODEL>
+      <COST>123.00</COST>
+   </PART>
+</PARTS>
+";
+        private const string Expected = @"
+<?xml version=""1.0""?>
+<PARTS>
+   <TITLE>Computer Parts</TITLE>
+   <PART>
+      <ITEM>Motherboard</ITEM>
+      <MANUFACTURER>ASWS</MANUFACTURER>
+      <MODEL>P3B-F</MODEL>
+      <COST>124.00</COSTT>
+   </QWER>
+</PARTS>
+";
+
         [Test, Property("TestGuid", "11111111-1111-1111-1111-111111111111"), 
             Property("Priority", "High"), 
             Property("TestType", "Smoke")]
         [Category("Cat1")]
         [Category("Failed")]
+        [Description("This is test description")]
         public void SimpleFailedTest()
         {
             Console.WriteLine("This is test output, we are logging some stuff!");
+            Console.WriteLine($"Comparing '{Actual}' and '{Expected}'");
+            TestDataHelper.AddTestData(Actual, Expected, "Let's compare!");
             Assert.AreEqual(1, 2);
         }
         
