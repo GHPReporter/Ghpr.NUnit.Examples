@@ -30,11 +30,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Ghpr.Core, Version=0.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\Ghpr.NUnitExamples\packages\Ghpr.Core.0.7.0\lib\net452\Ghpr.Core.dll</HintPath>
+    <Reference Include="Ghpr.Core, Version=0.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Ghpr.NUnitExamples\packages\Ghpr.Core.0.8.0\lib\net452\Ghpr.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Ghpr.NUnit, Version=0.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\Ghpr.NUnitExamples\packages\Ghpr.NUnit.0.7.0\lib\net452\Ghpr.NUnit.dll</HintPath>
+    <Reference Include="Ghpr.NUnit, Version=0.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Ghpr.NUnitExamples\packages\Ghpr.NUnit.0.8.0\lib\net452\Ghpr.NUnit.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
       <HintPath>..\Ghpr.NUnitExamples\packages\NUnit.Engine.3.7.0\lib\Mono.Cecil.dll</HintPath>
@@ -60,8 +60,8 @@
       <HintPath>..\Ghpr.NUnitExamples\packages\NUnit.Engine.3.7.0\lib\nunit.engine.api.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="nunit.framework, Version=3.8.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>..\Ghpr.NUnitExamples\packages\NUnit.3.8.1\lib\net45\nunit.framework.dll</HintPath>
+    <Reference Include="nunit.framework, Version=3.9.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\Ghpr.NUnitExamples\packages\NUnit.3.9.0\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
