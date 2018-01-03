@@ -30,11 +30,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Ghpr.Core, Version=0.8.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\Ghpr.NUnitExamples\packages\Ghpr.Core.0.8.0\lib\net452\Ghpr.Core.dll</HintPath>
+    <Reference Include="Ghpr.Core, Version=0.8.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Ghpr.NUnitExamples\packages\Ghpr.Core.0.8.0.2\lib\net452\Ghpr.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Ghpr.NUnit, Version=0.8.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\Ghpr.NUnitExamples\packages\Ghpr.NUnit.0.8.0\lib\net452\Ghpr.NUnit.dll</HintPath>
+    <Reference Include="Ghpr.NUnit, Version=0.8.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Ghpr.NUnitExamples\packages\Ghpr.NUnit.0.8.0.2\lib\net452\Ghpr.NUnit.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
       <HintPath>..\Ghpr.NUnitExamples\packages\NUnit.Engine.3.7.0\lib\Mono.Cecil.dll</HintPath>
@@ -80,9 +80,7 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Ghpr.Core.Settings.json" />
-    <Content Include="Ghpr.NUnit.Settings.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <None Include="Ghpr.NUnit.Settings.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
