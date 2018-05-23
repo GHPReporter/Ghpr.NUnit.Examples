@@ -65,10 +65,7 @@ namespace Ghpr.NUnitTests
             pb.Add("a", "1");
             pb.Add("b", "2");
             pb.Add("b", "3");
-            foreach (var key in pb.Keys)
-            {
-                TestContext.CurrentContext.Test.Properties.Add(key, pb.Get(key));
-            }
+            
             Console.Write($"{TestContext.CurrentContext.Test.FullName}");
             var p = TestContext.CurrentContext.Test.Properties;
             foreach (var k in p.Keys)
