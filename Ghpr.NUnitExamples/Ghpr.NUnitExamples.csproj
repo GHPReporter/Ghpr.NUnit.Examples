@@ -33,7 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Reference Include="Ghpr.Core, Version=0.9.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Ghpr.Core.0.9.0\lib\net452\Ghpr.Core.dll</HintPath>
     </Reference>
@@ -42,13 +41,6 @@
     </Reference>
     <Reference Include="Ghpr.NUnit, Version=0.9.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Ghpr.NUnit.0.9.0\lib\net452\Ghpr.NUnit.dll</HintPath>
-=======
-    <Reference Include="Ghpr.Core, Version=0.8.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\Ghpr.Core.0.8.2\lib\net452\Ghpr.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Ghpr.NUnit, Version=0.8.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\Ghpr.NUnit.0.8.2\lib\net452\Ghpr.NUnit.dll</HintPath>
->>>>>>> 1273c7d737ebaa7e5c2ecd172a9ae7f97834716e
     </Reference>
     <Reference Include="Mono.Cecil, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
       <HintPath>packages\NUnit.Engine.3.8.0\lib\Mono.Cecil.dll</HintPath>
