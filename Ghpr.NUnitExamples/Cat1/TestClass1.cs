@@ -6,7 +6,7 @@ using NUnit.Framework;
 namespace Ghpr.NUnitExamples.Cat1
 {
     [TestFixture]
-    public class TestClass1
+    public class TestClass1 : TestFixtureBase
     {
         private const string Actual = @"
 <?xml version=""1.0""?>

@@ -61,14 +61,14 @@ namespace Ghpr.NUnitTests
             Console.WriteLine("Testing log writing 1");
             Console.WriteLine("Testing log writing 2");
             
+<<<<<<< HEAD
+=======
             var pb =  new PropertyBag();
             pb.Add("a", "1");
             pb.Add("b", "2");
             pb.Add("b", "3");
-            foreach (var key in pb.Keys)
-            {
-                TestContext.CurrentContext.Test.Properties.Add(key, pb.Get(key));
-            }
+            
+>>>>>>> 1273c7d737ebaa7e5c2ecd172a9ae7f97834716e
             Console.Write($"{TestContext.CurrentContext.Test.FullName}");
             var p = TestContext.CurrentContext.Test.Properties;
             foreach (var k in p.Keys)

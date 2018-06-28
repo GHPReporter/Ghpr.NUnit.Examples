@@ -5,7 +5,7 @@ using NUnit.Framework;
 namespace Ghpr.NUnitExamples.Cat1
 {
     [TestFixture]
-    public class ParamTestClass
+    public class TestClass4 : TestFixtureBase
     {
         [TestCase("0", 1, "11111111-1111-1111-1111-111111111141", TestName = "Test 1")]
         [TestCase("1", 1, "11111111-1111-1111-1111-111111111142", TestName = "Test 2")]
