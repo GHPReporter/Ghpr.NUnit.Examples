@@ -43,7 +43,7 @@ namespace Ghpr.NUnitExamples.Cat1
         {
             Console.WriteLine("This is test output, we are logging some stuff!");
             Console.WriteLine($"Comparing '{Actual}' and '{Expected}'");
-            TestDataHelper.AddTestData(Actual, Expected, "Let's compare to XML strings!");
+            TestDataHelper.AddTestData(Actual, Expected, "Let's compare two XML strings!");
             Console.WriteLine($"Comparing '{Actual}' and '{Expected}'");
             TestDataHelper.AddTestData(Actual, Expected, "Let's compare for the second time!");
             Assert.AreEqual(1, 2);

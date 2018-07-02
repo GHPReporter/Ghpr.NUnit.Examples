@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace Ghpr.NUnitExamples.Cat1
 {
     [TestFixtureSource(typeof(MyFixtureData), "FixtureParms")]
-    public class ParameterizedTestFixture
+    public class ParameterizedTestFixture : TestFixtureBase
     {
         private readonly string _eq1;
         private readonly string _eq2;
