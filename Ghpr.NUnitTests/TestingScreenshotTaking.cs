@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 using Ghpr.NUnit.Utils;
 using NUnit.Framework;
@@ -32,6 +33,15 @@ namespace Ghpr.NUnitTests
             }
         }
 
+        public static string SaveScreen(byte[] screen, string fileName)
+        {
+            var folder = @"C:\Screenshots";
+            Directory.CreateDirectory(folder);
+            var fullPath = Path.Combine(folder, fileName);
+            File.WriteAllBytes(fullPath, screen);
+            return fullPath;
+        }
+
         [Test(Description = "This is example of taking screenshots inside test")]
         [Category("Screenshots")]
         public void TestMethodPassed()
@@ -53,6 +63,22 @@ namespace Ghpr.NUnitTests
             ScreenHelper.SaveScreenshot(bytes);
             Console.WriteLine("Done.");
             Assert.Fail("Noooooo..... Test is failed.");
+        }
+
+        [Test(Description = "This is example of saving screenshots using NUnit context")]
+        [Category("Screenshots")]
+        public void TestMethod()
+        {
+            Console.WriteLine("Taking screen...");
+            var bytes = TakeScreen();
+            var fullPath1 = SaveScreen(bytes, Guid.NewGuid() + ".png");
+            var fullPath2 = SaveScreen(bytes, Guid.NewGuid() + ".png");
+            var fullPath3 = SaveScreen(bytes, Guid.NewGuid() + ".png");
+            //all you need to do is to add full path to TestContext:
+            TestContext.AddTestAttachment(fullPath1);
+            TestContext.AddTestAttachment(fullPath2);
+            TestContext.AddTestAttachment(fullPath3);
+            Console.WriteLine("Done.");
         }
     }
 }
