@@ -247,3 +247,4 @@ Ghpr.NUnitExamples/.vs/Ghpr.NUnitExamples/v15/sqlite3/storage.ide
 *.ide
 *.ide-wal
 Ghpr.NUnitExamples/.vs/Ghpr.NUnitExamples/DesignTimeBuild/.dtbcache
+*.lock
